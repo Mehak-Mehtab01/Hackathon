@@ -1,0 +1,241 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Body Styling */
+body {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364); /* Sexy dark blue gradient */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: #ffffff;
+  padding: 20px;
+  animation: bodyFadeIn 1s ease-in-out; /* Animation on page load */
+}
+
+/* Container Styling for form */
+.container {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  padding: 30px;
+  width: 100%;
+  max-width: 400px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  transform: translateY(-50px); /* Start from above */
+  opacity: 0;
+  animation: containerSlideIn 0.8s ease-out forwards; /* Slide-in animation */
+}
+
+/* Heading */
+h1, h2 {
+  margin-bottom: 18px;
+  font-size: 2rem;
+  text-align: center;
+  color: #00BFA6; /* Soft teal for headlines */
+  animation: fadeInUp 1s ease-in-out; /* Animation for heading */
+}
+
+/* Input Fields */
+input {
+  width: 100%;
+  padding: 12px 20px;
+  margin-bottom: 12px;
+  border: none;
+  border-radius: 8px;
+  background: #f5f5f5;
+  font-size: 1rem;
+  transition: 0.3s ease;
+  animation: inputBounce 0.8s ease-in-out; /* Bounce animation on focus */
+}
+
+input:focus {
+  outline: none;
+  background: #e0e0e0;
+  box-shadow: 0 0 10px #00BFA6;
+  transform: scale(1.05); /* Slight scaling effect when focused */
+}
+
+/* Buttons */
+button {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  margin-top: 13px;
+  border-radius: 50px;
+  background: linear-gradient(90deg, #007bff, #00BFA6);
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.4s ease;
+  animation: buttonFadeIn 0.8s ease-in-out; /* Fade-in effect */
+}
+
+button:hover {
+  background: linear-gradient(90deg, #6f42c1, #00BFA6);
+  transform: scale(1.05); /* Scaling effect on hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+/* Link Text */
+p {
+  margin-top: 22px;
+  font-size: 1rem;
+  text-align: center;
+}
+
+a {
+  color: #00BFA6;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s ease;
+}
+
+a:hover {
+  color: #6f42c1;
+  text-decoration: underline; /* Underline effect on hover */
+}
+
+/* Google Button */
+.google-btn {
+  display: flex;
+  margin-top: 20px;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background: white;
+  color: #000;
+  border: 1px solid #ddd;
+  width: 100%;
+  padding: 12px;
+  border-radius: 50px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s ease;
+  animation: googleBtnFadeIn 1s ease-in-out; /* Fade-in animation */
+}
+
+.google-btn img {
+  width: 30px;
+  height: 30px;
+}
+
+/* Hover Effect on Google Button */
+.google-btn:hover {
+  background: #f5f5f5;
+  box-shadow: 0 0 15px rgba(0, 191, 166, 0.6); /* Glowing effect */
+  transform: scale(1.05); /* Slight scale to make it feel like it’s lifting */
+  transition: 0.4s ease;
+}
+
+/* Active / Clicked Effect on Google Button */
+.google-btn:active {
+  background: #e0e0e0;
+  transform: scale(0.97); /* Shrinks the button slightly to give a click effect */
+  box-shadow: 0 0 20px rgba(0, 191, 166, 0.8); /* Stronger glowing shadow */
+  animation: pulseEffect 0.6s ease-in-out; /* Pulse effect on click */
+}
+
+/* Google Button Focus (For accessibility) */
+.google-btn:focus {
+  outline: none;
+  box-shadow: 0 0 15px rgba(0, 191, 166, 1); /* Brighter glow on focus for accessibility */
+}
+.login-btn1{
+  margin-top: -10px;
+}
+#google-btn1{
+  margin-top: -1px;
+}
+.password{
+  margin-top: -19px;
+}
+/* Pulse Effect Animation */
+@keyframes pulseEffect {
+  0% {
+      transform: scale(0.97);
+  }
+  50% {
+      transform: scale(1.05); /* Expands slightly */
+  }
+  100% {
+      transform: scale(0.97);
+  }
+}
+
+/* Fade-in Animation */
+@keyframes googleBtnFadeIn {
+  0% {
+      opacity: 0;
+      transform: translateY(20px);
+  }
+  100% {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+/* Animations */
+@keyframes bodyFadeIn {
+  0% {
+      opacity: 0;
+  }
+  100% {
+      opacity: 1;
+  }
+}
+
+@keyframes containerSlideIn {
+  0% {
+      opacity: 0;
+      transform: translateY(-50px);
+  }
+  100% {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+      opacity: 0;
+      transform: translateY(30px);
+  }
+  100% {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+@keyframes inputBounce {
+  0% {
+      transform: scale(1);
+  }
+  30% {
+      transform: scale(1.05);
+  }
+  50% {
+      transform: scale(1);
+  }
+  100% {
+      transform: scale(1);
+  }
+}
+
+@keyframes buttonFadeIn {
+  0% {
+      opacity: 0;
+      transform: translateY(20px);
+  }
+  100% {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}

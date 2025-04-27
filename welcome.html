@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Welcome</title>
+  <script type="module" src="app1.js"></script>
+  <link rel="stylesheet" href="style1.css">
+  <script type="module" src="app.js"></script>
+</head>
+<body>
+     <h1>App Management App</h1>
+
+    <input type="text" id="search-input" placeholder="Search tasks..." style="margin: 20px; padding: 10px; width: 300px;">
+<button id="search-button" style="padding: 10px;">Search</button>
+
+    <div class="container">
+        <!-- To Do Column -->
+        <div id="todo-column" class="column">
+            <h2>To Do</h2>
+            <div id="todo-tasks">
+                <!-- Task cards will appear here -->
+            </div>
+            <button id="create-task-btn">Create Task</button>
+        </div>
+
+        <!-- In Progress Column -->
+        <div id="in-progress-column" class="column">
+            <h2>In Progress</h2>
+            <div id="in-progress-tasks">
+                <!-- Task cards will appear here -->
+            </div>
+        </div>
+
+        <!-- Done Column -->
+        <div id="done-column" class="column">
+            <h2>Done</h2>
+            <div id="done-tasks">
+                <!-- Task cards will appear here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Task Creation Modal -->
+    <div id="task-modal" class="modal">
+        <div class="modal-content">
+            <h2>Create Task</h2>
+            <input type="text" id="task-title" placeholder="Task Title" required />
+            <textarea id="task-description" placeholder="Task Description"></textarea>
+            <input type="text" id="task-assigned" placeholder="Assigned To" />
+
+            <label for="task-priority">Priority</label>
+<select id="task-priority">
+  <option value="Most Important">Most Important</option>
+  <option value="Important">Important</option>
+  <option value="Least Important">Least Important</option>
+</select>
+
+            <button id="save-task-btn">Save Task</button>
+            <button id="close-modal-btn">Close</button>
+        </div>
+    </div>
+
+  
+  <button onclick="logout()">Logout</button>
+</body>
+</html>
